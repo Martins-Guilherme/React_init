@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contador V1.0</title>
+  </head>
+  <body>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <div id="app"></div>
+
+    <script type="text/babel">
+      function Header() {
+        return (
+          <>
+            <header className="header">
+              <h1>Contador V1.0</h1>
+            </header>
+          </>
+        );
+      }
+
+      function Counter(props) {
+        const [counter, setCounter] = React.useState(0);
+        const [inputValue, setInputValue] = React.useState(1);
+
+        // Incrementar o contador
+        function handleButtonClickSum() {
+          // setCounter(counter );
+          setCounter(counter + Number(inputValue));
+        }
+        // Decrementar o contador
+        function handleButtonClickSub() {
+          if (counter > 0) {
+            setCounter(counter - Number(inputValue));
+          } else {
+            setCounter(0);
+          }
+        }
+        // Resetar o contador
+        function resetButtonClick() {
+          setCounter(0);
+        }
+
+        return (
+          <section className="counter">
+            <div className="input-counter">
+              {counter == 0 && (
+                <>
+                  <h3>Informe o fator multiplicador do contador</h3>
+                  <input
+                    type="number"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                  />
+                </>
+              )}
+            </div>
+            <div className="counter-display">
+              <p>{counter}</p>
+            </div>
+            <div className="counter-container">
+              <button onClick={handleButtonClickSum}>Incrementar</button>
+              <button onClick={handleButtonClickSub}>Decrementar</button>
+              <button onClick={resetButtonClick}>Resetar</button>
+            </div>
+            {counter == 0 && <h2>O contador está em zero!</h2>}
+          </section>
+        );
+      }
+
+      function App() {
+        return (
+          <section>
+            <Header />
+            <Counter />
+          </section>
+        );
+      }
+
+      const app = document.getElementById("app");
+      const root = ReactDOM.createRoot(app);
+      root.render(<App />);
+    </script>
+  </body>
+</html>

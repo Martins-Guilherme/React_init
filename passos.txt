@@ -1,0 +1,25 @@
+Exercício: Construindo um Aplicativo de Contador Simples
+Objetivo
+Criar um aplicativo simples de contador que permite aos usuários incrementar, decrementar e resetar um contador.
+Requisitos
+
+    Exibir o Valor do Contador: O valor atual do contador deve ser exibido na tela.
+    Botão Incrementar: Adicionar um botão que incrementa o contador em 1.
+    Botão Decrementar: Adicionar um botão que decrementa o contador em 1.
+    Botão Resetar: Adicionar um botão que reseta o contador para o valor inicial passado via props.
+    Renderização Condicional: Quando o contador estiver em zero, exibir uma mensagem "O contador está em zero".
+
+Passos
+
+    Configurar o Projeto: Crie um arquivo HTML e coloque os scripts do React e do Babel, assim como fizemos nas aulas anteriores.
+    Criar o Componente Counter: Crie um componente Counter que exiba o contador. O Valor inicial desse contador deve ser recebido como prop.
+    Crie os botões de incrementar e decrementar: crie eles dentro do componente Counter, e garanta que eles alterem o valor do contador ao serem clicados.
+    Estilizar o Aplicativo (Opcional): Adicione CSS básico para estilizar seu aplicativo de contador.
+    Executar o Aplicativo:  Rode a sua aplicação e teste-a!
+
+Desafios Adicionais
+
+    Campo de Entrada para Valor de Incremento: Adicione um campo de entrada que permita ao usuário definir o valor pelo qual o contador incrementa e decrementa.
+    Persistir Estado: Use localStorage para persistir o valor do contador entre os recarregamentos da página.
+
+A solução do exercício está anexada abaixo. E ao finalizá-lo, poste-o na nossa Comunidade! 🚀
